@@ -1,0 +1,75 @@
+@use '../../../styles/abstracts/mixins' as *;
+@use '../../../styles/components/forms' as forms;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: -0.01em;
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: 0.125rem;
+}
+
+.selectWrapper {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--color-text-muted);
+    pointer-events: none;
+    transition: border-color var(--transition-fast);
+  }
+
+  &:focus-within::after {
+    border-top-color: var(--color-primary);
+  }
+}
+
+.select {
+  @include forms.form-field-base;
+  padding: 0.6875rem 2.25rem 0.6875rem 0.875rem;
+  min-height: 2.875rem;
+  appearance: none;
+  cursor: pointer;
+  font-size: var(--text-base);
+  font-weight: 500;
+
+  &.error {
+    border-color: var(--color-danger);
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+    }
+  }
+}
+
+.errorText {
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+  font-weight: 500;
+
+  &::before {
+    content: '• ';
+  }
+}
+
+.chevron {
+  display: none;
+}

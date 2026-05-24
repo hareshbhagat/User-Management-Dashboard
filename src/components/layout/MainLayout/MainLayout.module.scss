@@ -1,0 +1,30 @@
+@use '../../../styles/abstracts/mixins' as *;
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding-top: 0;
+  min-width: 0;
+
+  @include respond-to(lg) {
+    margin-left: 0;
+  }
+}
+
+.content {
+  padding: var(--space-8);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeIn 0.4s var(--ease-out-expo) both;
+
+  @include respond-to(sm) {
+    padding: var(--space-4);
+  }
+}

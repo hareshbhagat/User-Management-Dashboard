@@ -1,0 +1,63 @@
+@use '../../../styles/abstracts/mixins' as *;
+@use '../../../styles/components/badges' as badges;
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-bg-elevated);
+  box-shadow: 0 0 0 3px rgba(91, 92, 246, 0.1), var(--shadow-sm);
+  transition: box-shadow var(--transition-fast);
+}
+
+.initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(91, 92, 246, 0.16), rgba(20, 184, 166, 0.12));
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  box-shadow: 0 0 0 3px rgba(91, 92, 246, 0.1), var(--shadow-sm);
+}
+
+.nameCell {
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.emailCell {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.roleBadge {
+  @include badges.badge-base;
+}
+
+@include badges.role-badges;
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+
+  button {
+    min-width: 4.2rem;
+  }
+}
+
+.hideMobile {
+  @include respond-to(md) {
+    display: none;
+  }
+}

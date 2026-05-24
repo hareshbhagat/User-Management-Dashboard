@@ -1,0 +1,187 @@
+:root {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --color-primary: #5b5cf6;
+  --color-primary-hover: #4f46e5;
+  --color-primary-active: #4338ca;
+  --color-primary-light: #eef2ff;
+  --color-primary-subtle: #f7f7ff;
+  --color-primary-muted: rgba(91, 92, 246, 0.14);
+  --color-accent: #14b8a6;
+  --color-accent-subtle: rgba(20, 184, 166, 0.12);
+
+  --color-secondary: #64748b;
+  --color-success: #059669;
+  --color-success-bg: #ecfdf5;
+  --color-warning: #d97706;
+  --color-warning-bg: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-bg: #fef2f2;
+  --color-info: #0284c7;
+  --color-info-bg: #f0f9ff;
+
+  --color-role-admin-bg: #fef2f2;
+  --color-role-admin-text: #b91c1c;
+  --color-role-moderator-bg: #fffbeb;
+  --color-role-moderator-text: #b45309;
+  --color-role-user-bg: #eef2ff;
+  --color-role-user-text: #4338ca;
+
+  --color-bg: #eef3f8;
+  --color-bg-elevated: #ffffff;
+  --color-bg-muted: #f8fafc;
+  --color-bg-subtle: #eef2f7;
+  --color-bg-overlay: rgba(15, 23, 42, 0.55);
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-border-subtle: #f1f5f9;
+
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+  --color-text-inverse: #ffffff;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 16px 34px -18px rgba(15, 23, 42, 0.28),
+    0 8px 20px -18px rgba(15, 23, 42, 0.18);
+  --shadow-lg: 0 24px 50px -24px rgba(15, 23, 42, 0.35),
+    0 10px 24px -18px rgba(15, 23, 42, 0.2);
+  --shadow-xl: 0 32px 70px -28px rgba(15, 23, 42, 0.42);
+  --shadow-glow: 0 0 0 1px rgba(79, 70, 229, 0.08),
+    0 8px 24px rgba(79, 70, 229, 0.18);
+  --shadow-inner: inset 0 1px 2px rgba(15, 23, 42, 0.06);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --navbar-height: 68px;
+  --sidebar-width: 284px;
+  --sidebar-collapsed: 76px;
+  --content-max-width: 1440px;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sidebar: 250;
+  --z-modal: 1000;
+  --z-toast: 1100;
+
+  --surface-glass: rgba(255, 255, 255, 0.94);
+  --surface-glass-strong: rgba(255, 255, 255, 0.9);
+  --surface-glass-border: rgba(255, 255, 255, 0.72);
+  --surface-panel-start: rgba(255, 255, 255, 0.96);
+  --surface-panel-mid: rgba(248, 250, 252, 0.84);
+  --surface-panel-end: rgba(255, 255, 255, 0.88);
+  --surface-muted-panel: rgba(248, 250, 252, 0.72);
+  --surface-input-muted: rgba(248, 250, 252, 0.9);
+  --surface-navbar: rgba(255, 255, 255, 0.86);
+  --surface-icon: rgba(255, 255, 255, 0.72);
+  --surface-detail: rgba(248, 250, 252, 0.72);
+  --grid-line-color: rgba(15, 23, 42, 0.035);
+  --hero-accent-1: rgba(91, 92, 246, 0.18);
+  --hero-accent-2: rgba(20, 184, 166, 0.16);
+  --hero-accent-3: rgba(91, 92, 246, 0.2);
+  --table-header-start: #f8fafc;
+  --table-header-end: #f1f5f9;
+  --table-row-hover-start: rgba(91, 92, 246, 0.08);
+  --table-row-hover-end: rgba(20, 184, 166, 0.04);
+  --body-overlay: rgba(255, 255, 255, 0.62);
+}
+
+[data-theme='dark'] {
+  --color-primary: #818cf8;
+  --color-primary-hover: #a5b4fc;
+  --color-primary-active: #6366f1;
+  --color-primary-light: #1e1b4b;
+  --color-primary-subtle: #1e293b;
+  --color-primary-muted: rgba(129, 140, 248, 0.15);
+  --color-accent-subtle: rgba(6, 182, 212, 0.12);
+
+  --color-role-admin-bg: #450a0a;
+  --color-role-admin-text: #fca5a5;
+  --color-role-moderator-bg: #451a03;
+  --color-role-moderator-text: #fcd34d;
+  --color-role-user-bg: #1e1b4b;
+  --color-role-user-text: #a5b4fc;
+
+  --color-bg: #0b1120;
+  --color-bg-elevated: #151f32;
+  --color-bg-muted: #1e293b;
+  --color-bg-subtle: #111827;
+  --color-bg-overlay: rgba(2, 6, 23, 0.72);
+  --color-border: #1e293b;
+  --color-border-strong: #334155;
+  --color-border-subtle: #151f32;
+
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  --color-success-bg: #064e3b;
+  --color-danger-bg: #450a0a;
+  --color-warning-bg: #451a03;
+  --color-info-bg: #0c4a6e;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 0 1px rgba(129, 140, 248, 0.12),
+    0 8px 24px rgba(129, 140, 248, 0.2);
+  --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  --surface-glass: rgba(21, 31, 50, 0.94);
+  --surface-glass-strong: rgba(21, 31, 50, 0.92);
+  --surface-glass-border: rgba(51, 65, 85, 0.65);
+  --surface-panel-start: rgba(21, 31, 50, 0.98);
+  --surface-panel-mid: rgba(17, 24, 39, 0.92);
+  --surface-panel-end: rgba(21, 31, 50, 0.9);
+  --surface-muted-panel: rgba(30, 41, 59, 0.78);
+  --surface-input-muted: rgba(30, 41, 59, 0.95);
+  --surface-navbar: rgba(11, 17, 32, 0.9);
+  --surface-icon: rgba(30, 41, 59, 0.85);
+  --surface-detail: rgba(30, 41, 59, 0.72);
+  --grid-line-color: rgba(148, 163, 184, 0.1);
+  --hero-accent-1: rgba(129, 140, 248, 0.22);
+  --hero-accent-2: rgba(20, 184, 166, 0.14);
+  --hero-accent-3: rgba(129, 140, 248, 0.24);
+  --table-header-start: #1e293b;
+  --table-header-end: #151f32;
+  --table-row-hover-start: rgba(129, 140, 248, 0.14);
+  --table-row-hover-end: rgba(20, 184, 166, 0.08);
+  --body-overlay: rgba(11, 17, 32, 0.45);
+}

@@ -1,0 +1,19 @@
+@use '../abstracts/mixins' as *;
+
+@mixin role-badges {
+  .role_admin {
+    @include role-badge-variant(--color-role-admin-bg, --color-role-admin-text);
+  }
+
+  .role_moderator {
+    @include role-badge-variant(--color-role-moderator-bg, --color-role-moderator-text);
+  }
+
+  .role_user {
+    @include role-badge-variant(--color-role-user-bg, --color-role-user-text);
+  }
+}
+
+@mixin badge-base {
+  @include role-badge;
+}

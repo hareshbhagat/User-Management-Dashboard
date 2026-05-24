@@ -1,0 +1,62 @@
+@use '../abstracts/mixins' as *;
+
+@mixin form-field-base {
+  width: 100%;
+  background: var(--color-bg-elevated);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: var(--color-border-strong);
+    background: var(--color-bg-muted);
+  }
+
+  &:focus {
+    @include focus-ring;
+    background: var(--color-bg-elevated);
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: var(--color-bg-muted);
+  }
+}
+
+@mixin floating-label-container {
+  position: relative;
+}
+
+@mixin floating-label {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition:
+    transform var(--transition-base),
+    color var(--transition-fast),
+    font-size var(--transition-base);
+  transform-origin: left center;
+  background: transparent;
+  padding: 0 0.125rem;
+}
+
+@mixin floating-label-active {
+  top: 0.625rem;
+  transform: translateY(0) scale(0.78);
+  color: var(--color-primary);
+  font-weight: 600;
+}

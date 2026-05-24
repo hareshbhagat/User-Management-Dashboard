@@ -1,0 +1,110 @@
+@use '../../../styles/abstracts/mixins' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  z-index: var(--z-modal);
+  animation: overlayFadeIn 0.25s ease both;
+}
+
+.modal {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInScale 0.35s var(--ease-out-expo) both;
+  overflow: hidden;
+}
+
+.sm {
+  max-width: 420px;
+}
+
+.md {
+  max-width: 580px;
+}
+
+.lg {
+  max-width: 760px;
+}
+
+.xl {
+  max-width: 960px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-muted) 40%, var(--color-bg-elevated));
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.closeBtn {
+  font-size: 1.125rem;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+
+  &:hover {
+    color: var(--color-text);
+    background: var(--color-bg-muted);
+  }
+}
+
+.body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  flex: 1;
+  @include scrollbar-thin;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-muted) 30%, var(--color-bg-elevated));
+}
+
+@include respond-to(sm) {
+  .overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal {
+    max-height: 92vh;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    animation: slideUp 0.35s var(--ease-out-expo) both;
+  }
+
+  .header,
+  .body,
+  .footer {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
